@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ES5 and ES6 Examples</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+  <script>
+    // ES5 Functions
+    function trimStringES5() {
+      var str = "   Hello, World!   ";
+      document.getElementById("trimOutput").innerHTML = str.trim();
+    }
+
+    function checkArrayES5() {
+      var arr = [1, 2, 3];
+      document.getElementById("checkArrayOutput").innerHTML = Array.isArray(arr);
+    }
+
+    function iterateArrayES5() {
+      var arr = [1, 2, 3];
+      var output = '';
+      arr.forEach(function (element) {
+        output += "<p>" + element + "</p>";
+      });
+      document.getElementById("iterateArrayOutput").innerHTML = output;
+    }
+
+    function mapArrayES5() {
+      var arr = [1, 2, 3];
+      var mappedArr = arr.map(function (element) {
+        return element * 2;
+      });
+      document.getElementById("mapArrayOutput").innerHTML = JSON.stringify(mappedArr);
+    }
+
+    function filterArrayES5() {
+      var arr = [1, 2, 3];
+      var filteredArr = arr.filter(function (element) {
+        return element > 1;
+      });
+      document.getElementById("filterArrayOutput").innerHTML = JSON.stringify(filteredArr);
+    }
+
+    function reduceArrayES5() {
+      var arr = [1, 2, 3];
+      var sum = arr.reduce(function (accumulator, currentValue) {
+        return accumulator + currentValue;
+      }, 0);
+      document.getElementById("reduceArrayOutput").innerHTML = sum;
+    }
+
+    function reduceRightArrayES5() {
+      var arr = [1, 2, 3];
+      var concat = arr.reduceRight(function (accumulator, currentValue) {
+        return accumulator + currentValue;
+      });
+      document.getElementById("reduceRightArrayOutput").innerHTML = concat;
+    }
+
+    function checkEveryES5() {
+      var arr = [1, 2, 3];
+      var allGreaterThanZero = arr.every(function (element) {
+        return element > 0;
+      });
+      document.getElementById("checkEveryOutput").innerHTML = allGreaterThanZero;
+    }
+
+    function checkSomeES5() {
+      var arr = [1, 2, 3];
+      var hasEvenNumber = arr.some(function (element) {
+        return element % 2 === 0;
+      });
+      document.getElementById("checkSomeOutput").innerHTML = hasEvenNumber;
+    }
+
+    function findIndexES5() {
+      var arr = [1, 2, 3];
+      document.getElementById("findIndexOutput").innerHTML = arr.indexOf(2);
+    }
+
+    function findLastIndexES5() {
+      var arr = [1, 2, 3];
+      document.getElementById("findLastIndexOutput").innerHTML = arr.lastIndexOf(2);
+    }
+
+    function parseJSONES5() {
+      var jsonString = '{"name":"John","age":30}';
+      var parsedObj = JSON.parse(jsonString);
+      document.getElementById("parseJSONOutput").innerHTML = parsedObj.name;
+    }
+
+    function stringifyJSONES5() {
+      var obj = { name: "John", age: 30 };
+      var jsonStringified = JSON.stringify(obj);
+      document.getElementById("stringifyJSONOutput").innerHTML = jsonStringified;
+    }
+
+    function getCurrentTimeES5() {
+      var currentTime = Date.now();
+      document.getElementById("getCurrentTimeOutput").innerHTML = currentTime;
+    }
+
+    // ES6 Functions
+    function trimStringES6() {
+      const str = "   Hello, World!   ";
+      document.getElementById("trimOutputES6").innerHTML = str.trim();
+    }
+
+    function checkArrayES6() {
+      const arr = [1, 2, 3];
+      document.getElementById("checkArrayOutputES6").innerHTML = Array.isArray(arr);
+    }
+
+    function iterateArrayES6() {
+      const arr = [1, 2, 3];
+      let output = '';
+      arr.forEach(element => {
+        output += "<p>" + element + "</p>";
+      });
+      document.getElementById("iterateArrayOutputES6").innerHTML = output;
+    }
+
+    function mapArrayES6() {
+      const arr = [1, 2, 3];
+      const mappedArr = arr.map(element => element * 2);
+      document.getElementById("mapArrayOutputES6").innerHTML = JSON.stringify(mappedArr);
+    }
+
+    function filterArrayES6() {
+      const arr = [1, 2, 3];
+      const filteredArr = arr.filter(element => element > 1);
+      document.getElementById("filterArrayOutputES6").innerHTML = JSON.stringify(filteredArr);
+    }
+
+    function reduceArrayES6() {
+      const arr = [1, 2, 3];
+      const sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      document.getElementById("reduceArrayOutputES6").innerHTML = sum;
+    }
+
+    function reduceRightArrayES6() {
+      const arr = [1, 2, 3];
+      const concat = arr.reduceRight((accumulator, currentValue) => accumulator + currentValue);
+      document.getElementById("reduceRightArrayOutputES6").innerHTML = concat;
+    }
+
+    function checkEveryES6() {
+      const arr = [1, 2, 3];
+      const allGreaterThanZero = arr.every(element => element > 0);
+      document.getElementById("checkEveryOutputES6").innerHTML = allGreaterThanZero;
+    }
+
+    function checkSomeES6() {
+      const arr = [1, 2, 3];
+      const hasEvenNumber = arr.some(element => element % 2 === 0);
+      document.getElementById("checkSomeOutputES6").innerHTML = hasEvenNumber;
+    }
+
+    function findIndexES6() {
+      const arr = [1, 2, 3];
+      document.getElementById("findIndexOutputES6").innerHTML = arr.indexOf(2);
+    }
+
+    function findLastIndexES6() {
+      const arr = [1, 2, 3];
+      document.getElementById("findLastIndexOutputES6").innerHTML = arr.lastIndexOf(2);
+    }
+
+    function parseJSONES6() {
+      const jsonString = '{"name":"John","age":30}';
+      const parsedObj = JSON.parse(jsonString);
+      document.getElementById("parseJSONOutputES6").innerHTML = parsedObj.name;
+    }
+
+    function stringifyJSONES6() {
+      const obj = { name: "John", age: 30 };
+      const jsonStringified = JSON.stringify(obj);
+      document.getElementById("stringifyJSONOutputES6").innerHTML = jsonStringified;
+    }
+
+    function getCurrentTimeES6() {
+      const currentTime = Date.now();
+      document.getElementById("getCurrentTimeOutputES6").innerHTML = currentTime;
+    }
+  </script>
+</head>
+<body>
+  <h1>ES5 and ES6 Examples</h1>
+  <table>
+    <tr>
+      <th>ES5 Functions</th>
+      <th>Output</th>
+      <th>ES6 Functions</th>
+      <th>Output</th>
+    </tr>
+    <tr>
+      <td><button onclick="trimStringES5()">String.trim()</button></td>
+      <td id="trimOutput"></td>
+      <td><button onclick="trimStringES6()">String.trim()</button></td>
+      <td id="trimOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="checkArrayES5()">Array.isArray()</button></td>
+      <td id="checkArrayOutput"></td>
+      <td><button onclick="checkArrayES6()">Array.isArray()</button></td>
+      <td id="checkArrayOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="iterateArrayES5()">Array.forEach()</button></td>
+      <td id="iterateArrayOutput"></td>
+      <td><button onclick="iterateArrayES6()">Array.forEach()</button></td>
+      <td id="iterateArrayOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="mapArrayES5()">Array.map()</button></td>
+      <td id="mapArrayOutput"></td>
+      <td><button onclick="mapArrayES6()">Array.map()</button></td>
+      <td id="mapArrayOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="filterArrayES5()">Array.filter()</button></td>
+      <td id="filterArrayOutput"></td>
+      <td><button onclick="filterArrayES6()">Array.filter()</button></td>
+      <td id="filterArrayOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="reduceArrayES5()">Array.reduce()</button></td>
+      <td id="reduceArrayOutput"></td>
+      <td><button onclick="reduceArrayES6()">Array.reduce()</button></td>
+      <td id="reduceArrayOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="reduceRightArrayES5()">Array.reduceRight()</button></td>
+      <td id="reduceRightArrayOutput"></td>
+      <td><button onclick="reduceRightArrayES6()">Array.reduceRight()</button></td>
+      <td id="reduceRightArrayOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="checkEveryES5()">Array.every()</button></td>
+      <td id="checkEveryOutput"></td>
+      <td><button onclick="checkEveryES6()">Array.every()</button></td>
+      <td id="checkEveryOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="checkSomeES5()">Array.some()</button></td>
+      <td id="checkSomeOutput"></td>
+      <td><button onclick="checkSomeES6()">Array.some()</button></td>
+      <td id="checkSomeOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="findIndexES5()">Array.indexOf()</button></td>
+      <td id="findIndexOutput"></td>
+      <td><button onclick="findIndexES6()">Array.indexOf()</button></td>
+      <td id="findIndexOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="findLastIndexES5()">Array.lastIndexOf()</button></td>
+      <td id="findLastIndexOutput"></td>
+      <td><button onclick="findLastIndexES6()">Array.lastIndexOf()</button></td>
+      <td id="findLastIndexOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="parseJSONES5()">JSON.parse()</button></td>
+      <td id="parseJSONOutput"></td>
+      <td><button onclick="parseJSONES6()">JSON.parse()</button></td>
+      <td id="parseJSONOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="stringifyJSONES5()">JSON.stringify()</button></td>
+      <td id="stringifyJSONOutput"></td>
+      <td><button onclick="stringifyJSONES6()">JSON.stringify()</button></td>
+      <td id="stringifyJSONOutputES6"></td>
+    </tr>
+    <tr>
+      <td><button onclick="getCurrentTimeES5()">Date.now()</button></td>
+      <td id="getCurrentTimeOutput"></td>
+      <td><button onclick="getCurrentTimeES6()">Date.now()</button></td>
+      <td id="getCurrentTimeOutputES6"></td>
+    </tr>
+  </table>
+
+  <script>
+    // Clear output elements initially
+    document.getElementById("trimOutput").innerHTML = "";
+    document.getElementById("checkArrayOutput").innerHTML = "";
+    document.getElementById("iterateArrayOutput").innerHTML = "";
+    document.getElementById("mapArrayOutput").innerHTML = "";
+    document.getElementById("filterArrayOutput").innerHTML = "";
+    document.getElementById("reduceArrayOutput").innerHTML = "";
+    document.getElementById("reduceRightArrayOutput").innerHTML = "";
+    document.getElementById("checkEveryOutput").innerHTML = "";
+    document.getElementById("checkSomeOutput").innerHTML = "";
+    document.getElementById("findIndexOutput").innerHTML = "";
+    document.getElementById("findLastIndexOutput").innerHTML = "";
+    document.getElementById("parseJSONOutput").innerHTML = "";
+    document.getElementById("stringifyJSONOutput").innerHTML = "";
+    document.getElementById("getCurrentTimeOutput").innerHTML = "";
+
+    document.getElementById("trimOutputES6").innerHTML = "";
+    document.getElementById("checkArrayOutputES6").innerHTML = "";
+    document.getElementById("iterateArrayOutputES6").innerHTML = "";
+    document.getElementById("mapArrayOutputES6").innerHTML = "";
+    document.getElementById("filterArrayOutputES6").innerHTML = "";
+    document.getElementById("reduceArrayOutputES6").innerHTML = "";
+    document.getElementById("reduceRightArrayOutputES6").innerHTML = "";
+    document.getElementById("checkEveryOutputES6").innerHTML = "";
+    document.getElementById("checkSomeOutputES6").innerHTML = "";
+    document.getElementById("findIndexOutputES6").innerHTML = "";
+    document.getElementById("findLastIndexOutputES6").innerHTML = "";
+    document.getElementById("parseJSONOutputES6").innerHTML = "";
+    document.getElementById("stringifyJSONOutputES6").innerHTML = "";
+    document.getElementById("getCurrentTimeOutputES6").innerHTML = "";
+  </script>
+</body>
+</html>
